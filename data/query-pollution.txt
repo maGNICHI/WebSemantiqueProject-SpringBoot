@@ -1,0 +1,11 @@
+PREFIX ont: <http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?pollution ?date_traitement ?status ?description ?date_reclamation ?sujet
+WHERE {
+    ?pollution rdf:type ont:Pollution.
+    ?pollution ont:status ?status.
+    ?pollution ont:description ?description.
+    ?pollution ont:date_reclamation ?date_reclamation.
+    ?pollution ont:sujet ?sujet.
+}

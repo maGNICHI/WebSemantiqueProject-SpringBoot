@@ -1,0 +1,10 @@
+PREFIX ont: <http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?WeLoveGreen ?description ?lieu ?nom
+WHERE {
+    ?WeLoveGreen rdf:type ont:WeLoveGreen .
+    ?WeLoveGreen ont:description ?description .
+    ?WeLoveGreen ont:lieu ?lieu .
+    ?WeLoveGreen ont:nom ?nom .
+}

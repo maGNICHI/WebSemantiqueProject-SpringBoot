@@ -1,0 +1,9 @@
+PREFIX ont: <http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?bus ?prix ?description
+WHERE {
+    ?bus rdf:type ont:bus .
+    ?bus ont:prix ?prix .
+    ?bus ont:description ?description .
+}

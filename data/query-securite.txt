@@ -1,0 +1,11 @@
+PREFIX ont: <http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?description ?status ?sujet ?date_reclamation ?date_traitement
+WHERE {
+    ?securite rdf:type ont:Securite .
+    ?securite ont:description ?description .
+    ?securite ont:status ?status .
+    ?securite ont:sujet ?sujet .
+    ?securite ont:date_traitement ?date_traitement .
+}

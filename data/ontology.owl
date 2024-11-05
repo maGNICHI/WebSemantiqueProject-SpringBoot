@@ -1,0 +1,723 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:untitled-ontology-4="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#bateau">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Transport"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Pollution">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Certif"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avis"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Estc">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_avoir"/>
+        </owl:onProperty>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Certif"/>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >10</owl:maxQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_proposer"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Destination"/>
+        </owl:onClass>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >100</owl:maxQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Itineraire">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_offrir"/>
+        </owl:onProperty>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Transport"/>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >10</owl:maxQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#MuseeLouvre">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Activite"/>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <untitled-ontology-4:titre>musee de louvre</untitled-ontology-4:titre>
+    <untitled-ontology-4:description>Le musee du Louvre est situé au sein du palais du Louvre dans le 1er arrondissement de Paris</untitled-ontology-4:description>
+    <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#MuseeLouvre"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#bus">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Transport"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reponse"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#affectuer_a"/>
+        </owl:onProperty>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >100</owl:maxQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_participer"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Activite"/>
+        </owl:onClass>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >100</owl:maxQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_soumettre"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation"/>
+        </owl:onClass>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >100</owl:maxQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_être_liée_à"/>
+        </owl:onProperty>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reponse"/>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >100</owl:maxQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Activite">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_laisser"/>
+        </owl:onProperty>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avis"/>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >100</owl:maxQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#avion">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Transport"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Securite">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Client">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Destination">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_faire"/>
+        </owl:onProperty>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >100</owl:maxQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_faire"/>
+        </owl:onProperty>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Itineraire"/>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >100</owl:maxQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Welovegreen">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#yuga">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Activite"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Admin">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#booking">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#fedex">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_faire">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Destination"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Itineraire"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_consulter"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_offrir">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Itineraire"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Transport"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_reserver">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_participer">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Activite"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_soumettre">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_être_liée_à">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#affectuer_a">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_avoir">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Certif"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_proposer">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Destination"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#peut_laisser">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Activite"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avis"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#status">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#date_debut">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#date_creation">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Activite"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avis"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#date_traitement">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#email">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#datenaissance">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#adresse">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#organisme_emetteur">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Certif"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#genre">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#prenom">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#prix">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Itineraire"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Transport"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#activite_locale">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Destination"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#date_expiration">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Certif"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#description">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Transport"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reponse"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Itineraire"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Destination"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Activite"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Certif"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#lieu">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#pays">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Destination"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#titre">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Activite"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#duree">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Itineraire"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#nom">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Certif"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Destination"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Itineraire"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#date_fin">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#numtelephone">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Partenaire"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Utilisateur"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#commentaire">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avis"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#sujet">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#date_attribution">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Certif"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#image">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Activite"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Destination"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#date_reclamation">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reclamation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#impact_environnemental">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#FedEx">
+    <untitled-ontology-4:email>fedex@gmail.com</untitled-ontology-4:email>
+    <untitled-ontology-4:adresse>tunis , manzah7</untitled-ontology-4:adresse>
+    <untitled-ontology-4:description>Société de transport express international et de logistique.</untitled-ontology-4:description>
+    <untitled-ontology-4:nom>Société de transport</untitled-ontology-4:nom>
+    <untitled-ontology-4:numtelephone>22334455</untitled-ontology-4:numtelephone>
+    <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#fedex"/>
+  </owl:NamedIndividual>
+  <untitled-ontology-4:WeLoveGreen rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#WeLoveGreen_790d7629-c5a2-45bf-94ca-44377179738b">
+    <untitled-ontology-4:description>A festival celebrating sustainable and eco-friendly music and culture.</untitled-ontology-4:description>
+    <untitled-ontology-4:lieu>Parc de la Villette, Paris</untitled-ontology-4:lieu>
+    <untitled-ontology-4:nom>We Love Green</untitled-ontology-4:nom>
+  </untitled-ontology-4:WeLoveGreen>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Amani">
+    <untitled-ontology-4:peut_consulter rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#MuseeLouvre"/>
+    <untitled-ontology-4:peut_consulter>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga">
+        <untitled-ontology-4:description>faire des activites pour inspiration et relaxation</untitled-ontology-4:description>
+        <untitled-ontology-4:titre>singapore yuga </untitled-ontology-4:titre>
+        <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#yuga"/>
+      </owl:NamedIndividual>
+    </untitled-ontology-4:peut_consulter>
+    <untitled-ontology-4:peut_consulter>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#aimer_activite">
+        <untitled-ontology-4:commentaire>elle est plus belle</untitled-ontology-4:commentaire>
+        <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avis"/>
+      </owl:NamedIndividual>
+    </untitled-ontology-4:peut_consulter>
+    <untitled-ontology-4:peut_consulter>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#prixBillet">
+        <untitled-ontology-4:commentaire>Je peux connait le prix de billet</untitled-ontology-4:commentaire>
+        <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avis"/>
+      </owl:NamedIndividual>
+    </untitled-ontology-4:peut_consulter>
+    <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Admin"/>
+  </owl:NamedIndividual>
+  <untitled-ontology-4:MuseeLouvre rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#MuseeLouvre_39f1da85-e731-4f0f-a4d1-eb6bfd334748">
+    <untitled-ontology-4:description>ffff</untitled-ontology-4:description>
+    <untitled-ontology-4:titre>null</untitled-ontology-4:titre>
+  </untitled-ontology-4:MuseeLouvre>
+  <untitled-ontology-4:avion rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avion_16467a26-81d0-46ee-beef-913ac404678b">
+    <untitled-ontology-4:description>test validation 2025</untitled-ontology-4:description>
+    <untitled-ontology-4:prix>12</untitled-ontology-4:prix>
+  </untitled-ontology-4:avion>
+  <untitled-ontology-4:RandoLoup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_467f5353-913d-4764-abac-d1dc40dde3dc">
+    <untitled-ontology-4:nom>Nom de l'événement</untitled-ontology-4:nom>
+    <untitled-ontology-4:description>Description de l'événement</untitled-ontology-4:description>
+    <untitled-ontology-4:lieu>Lieu de l'événement</untitled-ontology-4:lieu>
+    <untitled-ontology-4:impact_environnemental>Impact environnemental</untitled-ontology-4:impact_environnemental>
+  </untitled-ontology-4:RandoLoup>
+  <untitled-ontology-4:Yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_2529e015-67ea-478d-9ffe-952f9aa3f8f1">
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+  </untitled-ontology-4:Yuga>
+  <untitled-ontology-4:bus rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Bus_e315589c-81c2-4c77-93b4-277bfe021268">
+    <untitled-ontology-4:description>12</untitled-ontology-4:description>
+    <untitled-ontology-4:prix>12</untitled-ontology-4:prix>
+  </untitled-ontology-4:bus>
+  <untitled-ontology-4:Randoloup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_650369d1-1657-46dd-ac4c-bf514038700f">
+    <untitled-ontology-4:impact_environnemental>Impact environnemental</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>Lieu de l'événement</untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>Description de l'événement</untitled-ontology-4:description>
+    <untitled-ontology-4:nom>Nom de l'événement</untitled-ontology-4:nom>
+  </untitled-ontology-4:Randoloup>
+  <untitled-ontology-4:Randoloup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_3c614495-201b-4c01-b071-3a1e62a91c54">
+    <untitled-ontology-4:impact_environnemental>Impa</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>Lieu </untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>Description </untitled-ontology-4:description>
+    <untitled-ontology-4:nom>Nom </untitled-ontology-4:nom>
+  </untitled-ontology-4:Randoloup>
+  <untitled-ontology-4:Randoloup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_9d82397b-7d62-402a-9dcb-676af58a15d2">
+    <untitled-ontology-4:nom>Nom </untitled-ontology-4:nom>
+    <untitled-ontology-4:description>Description </untitled-ontology-4:description>
+    <untitled-ontology-4:lieu>Lieu </untitled-ontology-4:lieu>
+    <untitled-ontology-4:impact_environnemental>Impa</untitled-ontology-4:impact_environnemental>
+  </untitled-ontology-4:Randoloup>
+  <untitled-ontology-4:Estc rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Estc_33a7d47b-8d7e-4969-97d9-4e3213a40484">
+    <untitled-ontology-4:description>zazaz</untitled-ontology-4:description>
+    <untitled-ontology-4:nom>azaz</untitled-ontology-4:nom>
+    <untitled-ontology-4:lieu>zazaz</untitled-ontology-4:lieu>
+    <untitled-ontology-4:impact_environnemental>null</untitled-ontology-4:impact_environnemental>
+  </untitled-ontology-4:Estc>
+  <untitled-ontology-4:WeLoveGreen rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#WeLoveGreen_ae357def-d6d1-41a1-b25b-2b6425fea7d6">
+    <untitled-ontology-4:lieu>dddddddd</untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>vvvvvvvvvv</untitled-ontology-4:description>
+    <untitled-ontology-4:nom>xxxxxxxxxxxxx</untitled-ontology-4:nom>
+  </untitled-ontology-4:WeLoveGreen>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#securite">
+    <untitled-ontology-4:description>movement de place a autre</untitled-ontology-4:description>
+    <untitled-ontology-4:status>en cours</untitled-ontology-4:status>
+    <untitled-ontology-4:sujet>securite de transport</untitled-ontology-4:sujet>
+    <untitled-ontology-4:date_reclamation>02/02/2024</untitled-ontology-4:date_reclamation>
+    <untitled-ontology-4:date_traitement>03/03/2024</untitled-ontology-4:date_traitement>
+    <untitled-ontology-4:peut_être_liée_à>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#REPONSE">
+        <untitled-ontology-4:description>il ya quelqu'un ayant meme probleme</untitled-ontology-4:description>
+        <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Reponse"/>
+      </owl:NamedIndividual>
+    </untitled-ontology-4:peut_être_liée_à>
+    <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Securite"/>
+  </owl:NamedIndividual>
+  <untitled-ontology-4:bateau rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Bateau_47f8efe7-141d-46ff-b39b-db40a6deb3d3">
+    <untitled-ontology-4:description>jkjkjk</untitled-ontology-4:description>
+    <untitled-ontology-4:prix>1212</untitled-ontology-4:prix>
+  </untitled-ontology-4:bateau>
+  <untitled-ontology-4:Randoloup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_425b0c13-fdf6-46ad-8990-f16383dc249e">
+    <untitled-ontology-4:impact_environnemental>Impact environnemental</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>Lieu de l'événement</untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>Description de l'événement</untitled-ontology-4:description>
+    <untitled-ontology-4:nom>Nom de l'événement</untitled-ontology-4:nom>
+  </untitled-ontology-4:Randoloup>
+  <untitled-ontology-4:yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_9234d409-4dfb-4050-8461-271e23cc86e1">
+    <untitled-ontology-4:description>azazaza</untitled-ontology-4:description>
+    <untitled-ontology-4:titre>azaz</untitled-ontology-4:titre>
+  </untitled-ontology-4:yuga>
+  <untitled-ontology-4:MuseeLouvre rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#MuseeLouvre_c4119e81-2086-49e2-8e70-e964713647bc">
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+    <untitled-ontology-4:titre>olampique</untitled-ontology-4:titre>
+  </untitled-ontology-4:MuseeLouvre>
+  <untitled-ontology-4:bus rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Bus_12cdb385-fcc6-4c3a-a155-ba540ecaa758">
+    <untitled-ontology-4:description>azazazaz</untitled-ontology-4:description>
+    <untitled-ontology-4:prix>25</untitled-ontology-4:prix>
+  </untitled-ontology-4:bus>
+  <untitled-ontology-4:avion rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avion_adfa99f2-aa81-4be2-ba87-9189488e1263">
+    <untitled-ontology-4:prix rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</untitled-ontology-4:prix>
+    <untitled-ontology-4:description>ameni</untitled-ontology-4:description>
+  </untitled-ontology-4:avion>
+  <untitled-ontology-4:Yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_952160f7-a8ba-44fc-bc38-f503b7f96cca">
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+  </untitled-ontology-4:Yuga>
+  <untitled-ontology-4:RandoLoup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_ac360d04-9877-4ac0-a038-ef9f51ba782c">
+    <untitled-ontology-4:nom>Nom de l'événement</untitled-ontology-4:nom>
+    <untitled-ontology-4:description>Description de l'événement</untitled-ontology-4:description>
+    <untitled-ontology-4:lieu>Lieu de l'événement</untitled-ontology-4:lieu>
+    <untitled-ontology-4:impact_environnemental>Impact environnemental</untitled-ontology-4:impact_environnemental>
+  </untitled-ontology-4:RandoLoup>
+  <untitled-ontology-4:Randoloup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#RandoLoup_4755a4e7-fb28-46fb-ad06-04cb1c9dd401">
+    <untitled-ontology-4:nom>Nom </untitled-ontology-4:nom>
+    <untitled-ontology-4:description>Description </untitled-ontology-4:description>
+    <untitled-ontology-4:lieu>Lieu </untitled-ontology-4:lieu>
+    <untitled-ontology-4:impact_environnemental>Impa</untitled-ontology-4:impact_environnemental>
+  </untitled-ontology-4:Randoloup>
+  <untitled-ontology-4:MuseeLouvre rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#MuseeLouvre_ff87b9fd-7833-4a7a-9175-feae9f28e4ba">
+    <untitled-ontology-4:description>azazaz</untitled-ontology-4:description>
+    <untitled-ontology-4:titre>azaz</untitled-ontology-4:titre>
+  </untitled-ontology-4:MuseeLouvre>
+  <untitled-ontology-4:avion rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avion_5f82409e-8039-46c4-8601-a2be35af4960">
+    <untitled-ontology-4:prix>125</untitled-ontology-4:prix>
+    <untitled-ontology-4:description>test validation 2</untitled-ontology-4:description>
+  </untitled-ontology-4:avion>
+  <untitled-ontology-4:avion rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avion_3470c2bc-f09b-4db8-be11-501f41f2eb60">
+    <untitled-ontology-4:prix>10</untitled-ontology-4:prix>
+    <untitled-ontology-4:description>test validation</untitled-ontology-4:description>
+  </untitled-ontology-4:avion>
+  <untitled-ontology-4:Randoloup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_bd3f9bb4-37a2-426f-a71c-6a7f1c762742">
+    <untitled-ontology-4:impact_environnemental>Impact environnemental</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>Lieu de l'événement</untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>Description de l'événement</untitled-ontology-4:description>
+    <untitled-ontology-4:nom>Nom de l'événement</untitled-ontology-4:nom>
+  </untitled-ontology-4:Randoloup>
+  <untitled-ontology-4:Yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_a5d5f24b-aacd-4d3e-b7f5-bbf43338b17c">
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+  </untitled-ontology-4:Yuga>
+  <untitled-ontology-4:WeLoveGreen rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#WeLoveGreen_5a510d17-62f0-4ed3-98ea-46ea5776b513">
+    <untitled-ontology-4:lieu>Parc de la Villette</untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>A festival </untitled-ontology-4:description>
+    <untitled-ontology-4:nom>We Love </untitled-ontology-4:nom>
+  </untitled-ontology-4:WeLoveGreen>
+  <untitled-ontology-4:Yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_8ec31c94-b050-4f45-9037-d155b2b42749">
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+  </untitled-ontology-4:Yuga>
+  <untitled-ontology-4:WeLoveGreen rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#WeLoveGreen_d171bd9f-479a-4af9-8ba4-ef38e712de6c">
+    <untitled-ontology-4:lieu>azazaz</untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>azazaz</untitled-ontology-4:description>
+    <untitled-ontology-4:nom>azazaz</untitled-ontology-4:nom>
+  </untitled-ontology-4:WeLoveGreen>
+  <untitled-ontology-4:Randoloup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#RandoLoup_e7de6f79-3f7c-4885-bc04-afca7fb5798a">
+    <untitled-ontology-4:impact_environnemental>Impa</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>Lieu </untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>Description </untitled-ontology-4:description>
+    <untitled-ontology-4:nom>Nom </untitled-ontology-4:nom>
+  </untitled-ontology-4:Randoloup>
+  <untitled-ontology-4:MuseeLouvre rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#MuseeLouvre_da0a4f85-d436-4a51-8e8f-49cd0adc3b16">
+    <untitled-ontology-4:description>vvvvvv</untitled-ontology-4:description>
+    <untitled-ontology-4:titre>muse louvre</untitled-ontology-4:titre>
+  </untitled-ontology-4:MuseeLouvre>
+  <untitled-ontology-4:Randoloup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_0238f894-8fce-4864-8746-ddaa9f59c66e">
+    <untitled-ontology-4:impact_environnemental>Impact environnemental</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>Lieu de l'événement</untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>Description de l'événement</untitled-ontology-4:description>
+    <untitled-ontology-4:nom>Nom de l'événement</untitled-ontology-4:nom>
+  </untitled-ontology-4:Randoloup>
+  <untitled-ontology-4:Yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_81fc25dc-e1b0-4918-b3ea-19ab39146b42">
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+  </untitled-ontology-4:Yuga>
+  <untitled-ontology-4:MuseeLouvre rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#MuseeLouvre_16a5163d-05f5-4960-8e68-9e59830e3bf3">
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+  </untitled-ontology-4:MuseeLouvre>
+  <untitled-ontology-4:Yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_2c9ddb90-213c-45a9-bf68-503a4e0cf19d">
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+  </untitled-ontology-4:Yuga>
+  <untitled-ontology-4:Estc rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Estc_bd7ce63e-b303-4287-974f-79689c8b2d4f">
+    <untitled-ontology-4:impact_environnemental>null</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>aaaaaaaaaa</untitled-ontology-4:lieu>
+    <untitled-ontology-4:nom>vvvvvvv</untitled-ontology-4:nom>
+    <untitled-ontology-4:description>aaaaaaaaaaaa</untitled-ontology-4:description>
+  </untitled-ontology-4:Estc>
+  <untitled-ontology-4:Yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_dfdc635d-7112-4e4b-9a49-f5c8e4bc3536">
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+  </untitled-ontology-4:Yuga>
+  <untitled-ontology-4:Estc rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Estc_5895a967-fecc-4678-b703-fd697d2c834d">
+    <untitled-ontology-4:impact_environnemental>Low</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>Paris</untitled-ontology-4:lieu>
+    <untitled-ontology-4:nom>Eco-Friendly Tour</untitled-ontology-4:nom>
+    <untitled-ontology-4:description>A tour designed with environmental sustainability in mind.</untitled-ontology-4:description>
+  </untitled-ontology-4:Estc>
+  <untitled-ontology-4:Estc rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Estc_152e0155-4e01-4cbd-90e2-dbe85167f1fd">
+    <untitled-ontology-4:impact_environnemental>Low</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>Paris</untitled-ontology-4:lieu>
+    <untitled-ontology-4:nom>Eco-Friendly Tour</untitled-ontology-4:nom>
+    <untitled-ontology-4:description>A tour designed with environmental sustainability in mind.</untitled-ontology-4:description>
+  </untitled-ontology-4:Estc>
+  <untitled-ontology-4:Client rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Manar">
+    <untitled-ontology-4:peut_participer rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <untitled-ontology-4:genre>femme</untitled-ontology-4:genre>
+    <untitled-ontology-4:status>celibataire</untitled-ontology-4:status>
+    <untitled-ontology-4:datenaissance>26/05/2000</untitled-ontology-4:datenaissance>
+    <untitled-ontology-4:prenom>Manar</untitled-ontology-4:prenom>
+    <untitled-ontology-4:email>gnichimanar@gmail.com</untitled-ontology-4:email>
+    <untitled-ontology-4:peut_participer rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#MuseeLouvre"/>
+    <untitled-ontology-4:nom>Gnichi</untitled-ontology-4:nom>
+    <untitled-ontology-4:numtelephone>94568403</untitled-ontology-4:numtelephone>
+  </untitled-ontology-4:Client>
+  <untitled-ontology-4:RandoLoup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_e59e8f8b-071f-438a-b8e7-75648cea48b5">
+    <untitled-ontology-4:impact_environnemental>Impact environnemental</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>Lieu de l'événement</untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>Description de l'événement</untitled-ontology-4:description>
+    <untitled-ontology-4:nom>Nom de l'événement</untitled-ontology-4:nom>
+  </untitled-ontology-4:RandoLoup>
+  <untitled-ontology-4:Yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_fd5b2927-28d3-4353-8c27-4d238b78cf38">
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+  </untitled-ontology-4:Yuga>
+  <untitled-ontology-4:RandoLoup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_c8bf4c62-0a39-4644-b563-9c129ccd3cfa">
+    <untitled-ontology-4:nom>Nom de l'événement</untitled-ontology-4:nom>
+    <untitled-ontology-4:description>Description de l'événement</untitled-ontology-4:description>
+    <untitled-ontology-4:lieu>Lieu de l'événement</untitled-ontology-4:lieu>
+    <untitled-ontology-4:impact_environnemental>Impact environnemental</untitled-ontology-4:impact_environnemental>
+  </untitled-ontology-4:RandoLoup>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Booking">
+    <untitled-ontology-4:nom>Site de réservation d'hôtels</untitled-ontology-4:nom>
+    <untitled-ontology-4:numtelephone>44332266</untitled-ontology-4:numtelephone>
+    <untitled-ontology-4:adresse>sousse,nkhilette</untitled-ontology-4:adresse>
+    <untitled-ontology-4:description>Site de réservation d'hôtels, appartements, maisons de vacances</untitled-ontology-4:description>
+    <untitled-ontology-4:email>booking@outlook.tn</untitled-ontology-4:email>
+    <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#booking"/>
+  </owl:NamedIndividual>
+  <untitled-ontology-4:WeLoveGreen rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#WeLoveGreen_3138b5cc-3e1b-4fb9-8a3d-9517fd34642a">
+    <untitled-ontology-4:lieu>Parc de la wwwwwwww</untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>A wwwwww </untitled-ontology-4:description>
+    <untitled-ontology-4:nom>We  </untitled-ontology-4:nom>
+  </untitled-ontology-4:WeLoveGreen>
+  <untitled-ontology-4:Yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_82b5f683-f52b-4764-bd2b-82b9f8be2d1f">
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+  </untitled-ontology-4:Yuga>
+  <untitled-ontology-4:yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_f5731275-c043-44c3-8ecc-846d67b1d173">
+    <untitled-ontology-4:titre>vvv</untitled-ontology-4:titre>
+    <untitled-ontology-4:description>xxxxxxx</untitled-ontology-4:description>
+  </untitled-ontology-4:yuga>
+  <untitled-ontology-4:Yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_f0e5c176-e3fd-4102-81d0-f42060280c90">
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+  </untitled-ontology-4:Yuga>
+  <untitled-ontology-4:yuga rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Yuga_d8bdd741-9961-4780-b999-65abfdde1e30">
+    <untitled-ontology-4:description>aloors.</untitled-ontology-4:description>
+    <untitled-ontology-4:titre>olamyogapique</untitled-ontology-4:titre>
+  </untitled-ontology-4:yuga>
+  <untitled-ontology-4:Destination rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#DESTINATION">
+    <untitled-ontology-4:peut_faire>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#RandoLoup">
+        <untitled-ontology-4:impact_environnemental> a la nature</untitled-ontology-4:impact_environnemental>
+        <untitled-ontology-4:lieu>FRANCE</untitled-ontology-4:lieu>
+        <untitled-ontology-4:description>Randonnée organisée dans le parc du Mercantour pour observer la faune sauvage, y compris les loups, et sensibiliser à la préservation des espèces.</untitled-ontology-4:description>
+        <untitled-ontology-4:nom>Rando Loup (France)</untitled-ontology-4:nom>
+        <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup"/>
+      </owl:NamedIndividual>
+    </untitled-ontology-4:peut_faire>
+    <untitled-ontology-4:peut_faire>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#WeLoveGreen">
+        <untitled-ontology-4:description>Festival de musique engagé pour l'environnement, utilisant des énergies renouvelables et prônant la sensibilisation écologique.</untitled-ontology-4:description>
+        <untitled-ontology-4:lieu>France</untitled-ontology-4:lieu>
+        <untitled-ontology-4:nom>We Love Green</untitled-ontology-4:nom>
+        <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Welovegreen"/>
+      </owl:NamedIndividual>
+    </untitled-ontology-4:peut_faire>
+    <untitled-ontology-4:nom>toulouse</untitled-ontology-4:nom>
+    <untitled-ontology-4:image>C:\Users\MSI\Pictures\oyage\n.png</untitled-ontology-4:image>
+    <untitled-ontology-4:activite_locale>visite les museum; jardin pulbic</untitled-ontology-4:activite_locale>
+    <untitled-ontology-4:peut_faire>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#ESTC">
+        <untitled-ontology-4:impact_environnemental>Conférence</untitled-ontology-4:impact_environnemental>
+        <untitled-ontology-4:lieu>USA</untitled-ontology-4:lieu>
+        <untitled-ontology-4:nom>EcoTourism and Sustainable Tourism Conference</untitled-ontology-4:nom>
+        <untitled-ontology-4:description>Conférence axée sur la promotion de l'écotourisme, avec des ateliers, des panels et des opportunités de réseautage.
+</untitled-ontology-4:description>
+        <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Estc"/>
+      </owl:NamedIndividual>
+    </untitled-ontology-4:peut_faire>
+    <untitled-ontology-4:description>nnnnnnnnnnnnn</untitled-ontology-4:description>
+    <untitled-ontology-4:peut_faire>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#ITINERAIRE">
+        <untitled-ontology-4:prix>1000</untitled-ontology-4:prix>
+        <untitled-ontology-4:nom>on va passer d'abord a nice</untitled-ontology-4:nom>
+        <untitled-ontology-4:nom>nice</untitled-ontology-4:nom>
+        <untitled-ontology-4:duree>2</untitled-ontology-4:duree>
+        <untitled-ontology-4:peut_offrir>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Avion">
+            <untitled-ontology-4:prix>1200</untitled-ontology-4:prix>
+            <untitled-ontology-4:description>choisie une avion classe economie</untitled-ontology-4:description>
+            <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#avion"/>
+          </owl:NamedIndividual>
+        </untitled-ontology-4:peut_offrir>
+        <untitled-ontology-4:peut_offrir>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#BUS">
+            <untitled-ontology-4:prix>300</untitled-ontology-4:prix>
+            <untitled-ontology-4:description>peut offrir un bus comfort</untitled-ontology-4:description>
+            <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#bus"/>
+          </owl:NamedIndividual>
+        </untitled-ontology-4:peut_offrir>
+        <untitled-ontology-4:peut_offrir>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Bateau">
+            <untitled-ontology-4:prix>700</untitled-ontology-4:prix>
+            <untitled-ontology-4:description>une tourne avec bateau a des plusieurss passages
+</untitled-ontology-4:description>
+            <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#bateau"/>
+          </owl:NamedIndividual>
+        </untitled-ontology-4:peut_offrir>
+        <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Itineraire"/>
+      </owl:NamedIndividual>
+    </untitled-ontology-4:peut_faire>
+    <untitled-ontology-4:pays>france</untitled-ontology-4:pays>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </untitled-ontology-4:Destination>
+  <untitled-ontology-4:RandoLoup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_b98be57f-a6ae-459e-a185-66b9a3298e7d">
+    <untitled-ontology-4:impact_environnemental>Impact environnemental</untitled-ontology-4:impact_environnemental>
+    <untitled-ontology-4:lieu>Lieu de l'événement</untitled-ontology-4:lieu>
+    <untitled-ontology-4:description>Description de l'événement</untitled-ontology-4:description>
+    <untitled-ontology-4:nom>Nom de l'événement</untitled-ontology-4:nom>
+  </untitled-ontology-4:RandoLoup>
+  <untitled-ontology-4:RandoLoup rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Randoloup_5b9f1ee2-afe0-47bc-a933-29c619edd546">
+    <untitled-ontology-4:nom>Nom de l'événement</untitled-ontology-4:nom>
+    <untitled-ontology-4:description>Description de l'événement</untitled-ontology-4:description>
+    <untitled-ontology-4:lieu>Lieu de l'événement</untitled-ontology-4:lieu>
+    <untitled-ontology-4:impact_environnemental>Impact environnemental</untitled-ontology-4:impact_environnemental>
+  </untitled-ontology-4:RandoLoup>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Polution">
+    <untitled-ontology-4:date_traitement>09/09/2024
+</untitled-ontology-4:date_traitement>
+    <untitled-ontology-4:status>en cours</untitled-ontology-4:status>
+    <untitled-ontology-4:description>co2 plus que o2</untitled-ontology-4:description>
+    <untitled-ontology-4:date_reclamation>08/08/2024</untitled-ontology-4:date_reclamation>
+    <untitled-ontology-4:sujet>polution aerien</untitled-ontology-4:sujet>
+    <untitled-ontology-4:peut_être_liée_à rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#REPONSE"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#Pollution"/>
+  </owl:NamedIndividual>
+</rdf:RDF>

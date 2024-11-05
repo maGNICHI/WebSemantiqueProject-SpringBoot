@@ -1,0 +1,11 @@
+PREFIX ont: <http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?estc ?impact_environnemental ?lieu ?nom ?description
+WHERE {
+    ?estc rdf:type ont:Estc.
+    ?estc ont:impact_environnemental ?impact_environnemental.
+    ?estc ont:lieu ?lieu.
+    ?estc ont:nom ?nom.
+    ?estc ont:description ?description.
+}

@@ -1,0 +1,11 @@
+PREFIX ont: <http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?impact_environnemental ?lieu ?description ?nom
+WHERE {
+    ont:RandoLoup rdf:type ont:Randoloup.
+    ont:RandoLoup ont:impact_environnemental ?impact_environnemental.
+    ont:RandoLoup ont:lieu ?lieu.
+    ont:RandoLoup ont:description ?description.
+    ont:RandoLoup ont:nom ?nom.
+}

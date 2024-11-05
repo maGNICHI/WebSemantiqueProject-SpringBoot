@@ -1,0 +1,12 @@
+PREFIX ont: <http://www.semanticweb.org/msi/ontologies/2024/8/untitled-ontology-4#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?nom ?numtelephone ?adresse ?description ?email
+WHERE {
+    ?booking rdf:type ont:booking.
+    ?booking ont:nom ?nom.
+    ?booking ont:numtelephone ?numtelephone.
+    ?booking ont:adresse ?adresse.
+    ?booking ont:description ?description.
+    ?booking ont:email ?email.
+}
